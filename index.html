@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shortcut Syndicate</title>
+<style>
+:root{--bg:#050816;--card:#10192f;--accent:#22b8ff;--text:#fff}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text)}
+.light{--bg:#f5f7fb;--card:#fff;--text:#111}
+nav{position:sticky;top:0;background:#08101fcc;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 10px}
+.hero{padding:90px 20px;text-align:center;background:linear-gradient(135deg,#08142f,#0ea5ff)}
+.hero h1{font-size:48px}
+.btn{background:#0ea5ff;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;display:inline-block;margin:6px}
+section{padding:50px 20px;max-width:1200px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.card{background:var(--card);padding:18px;border-radius:16px}
+iframe{width:100%;height:315px;border:none;border-radius:12px}
+input{width:100%;padding:10px;border-radius:8px}
+footer{text-align:center;padding:30px;background:#020617}
+.toggle{position:fixed;right:15px;bottom:15px;padding:10px}
+</style>
+</head>
+<body>
+<nav>
+<a href="#videos">Videos</a>
+<a href="#vault">Vault</a>
+<a href="#commands">Commands</a>
+<a href="#achievements">Achievements</a>
+</nav>
+
+<div class="hero">
+<h1>SHORTCUT SYNDICATE</h1>
+<p>Master Your PC. Discover More. Dominate Faster.</p>
+<a class="btn" href="https://youtube.com/@shortcutsyndicate">YouTube</a>
+<a class="btn" href="https://www.instagram.com/farhan.xpc/">Instagram</a>
+<h3>Goal: 5000 Subscribers</h3>
+<progress value="32" max="5000" style="width:80%"></progress>
+</div>
+
+<section id="videos">
+<h2>Featured Shorts</h2>
+<div class="grid">
+<div class="card"><iframe src="https://www.youtube.com/embed/n1rytrFLSrk"></iframe></div>
+<div class="card"><iframe src="https://www.youtube.com/embed/w5v3ZSNmpak"></iframe></div>
+<div class="card"><iframe src="https://www.youtube.com/embed/oNw2Kf833SU"></iframe></div>
+<div class="card"><iframe src="https://www.youtube.com/embed/w4wwxGea2eU"></iframe></div>
+<div class="card"><iframe src="https://www.youtube.com/embed/KY9ozC5xUtk"></iframe></div>
+<div class="card"><iframe src="https://www.youtube.com/embed/Ue1n2q3g1qo"></iframe></div>
+</div>
+</section>
+
+<section id="vault">
+<h2>Website Vault</h2>
+<div class="grid">
+<div class="card">Canva</div>
+<div class="card">Photopea</div>
+<div class="card">Remove.bg</div>
+<div class="card">TinyWow</div>
+</div>
+</section>
+
+<section id="commands">
+<h2>PC Commands Database</h2>
+<input id="search" placeholder="Search command...">
+<div class="grid" id="cmds">
+<div class="card">ipconfig</div>
+<div class="card">ping</div>
+<div class="card">tasklist</div>
+<div class="card">dxdiag</div>
+<div class="card">sfc /scannow</div>
+<div class="card">shutdown /r</div>
+</div>
+</section>
+
+<section id="achievements">
+<h2>Achievements</h2>
+<div class="grid">
+<div class="card">100 Subscribers</div>
+<div class="card">500 Subscribers</div>
+<div class="card">1000 Subscribers</div>
+<div class="card">5000 Subscribers Goal</div>
+</div>
+</section>
+
+<section>
+<h2>Gaming Setup Showcase</h2>
+<div class="card">Coming Soon</div>
+</section>
+
+<section>
+<h2>Website of the Day</h2>
+<div class="card">Coming Soon</div>
+</section>
+
+<section>
+<h2>PC Tip of the Day</h2>
+<div class="card">Coming Soon</div>
+</section>
+
+<footer>
+<p>Shortcut Syndicate © 2026</p>
+<p>teamofficialspc06@gmail.com</p>
+</footer>
+
+<button class="toggle" onclick="document.body.classList.toggle('light')">Dark/Light</button>
+
+<script>
+document.getElementById('search').addEventListener('input',function(){
+ let q=this.value.toLowerCase();
+ document.querySelectorAll('#cmds .card').forEach(c=>{
+   c.style.display=c.textContent.toLowerCase().includes(q)?'block':'none';
+ });
+});
+</script>
+</body>
+</html>
